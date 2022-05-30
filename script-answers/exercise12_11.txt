@@ -1,0 +1,24 @@
+Script started on 2022-05-30 15:57:23+03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="145" LINES="30"]
+]0;kveikki@Kveikki-PC: /mnt/c/Repos/Fullstack Open 12/todo-app/todo-backend[01;32mkveikki@Kveikki-PC[00m:[01;34m/mnt/c/Repos/Fullstack Open 12/todo-app/todo-backend[00m$ exitdocker exec -it todo-backend-redis-1 bashexit[Kdocker exec -it todo-backend-redis-1 bash
+[?2004hroot@fca513091547:/data# [Kroot@fca513091547:/data# redis-[2Pexitredis-cli SET added_todos 0root@fca513091547:/data# exit[K    redis-cli KETY  YS *
+[?2004l1) "added_todos"
+[?2004hroot@fca513091547:/data# redis-cli GET added_todos
+[?2004l"0"
+[?2004hroot@fca513091547:/data# redis-cli SET added_todos9  9001
+[?2004lOK
+[?2004hroot@fca513091547:/data# redis-cli GET addedd _todos  
+[?2004l"9001"
+[?2004hroot@fca513091547:/data# redis-cli GET added_todos
+[?2004l"9002"
+[?2004hroot@fca513091547:/data# redisc -cli del     DEL added_todos
+[?2004l(integer) 1
+[?2004hroot@fca513091547:/data# redis-cli KEYSA  *
+[?2004l(empty array)
+[?2004hroot@fca513091547:/data# redis-cli KEYS *DEL added_todosGET added_todos
+[?2004l"1"
+[?2004hroot@fca513091547:/data# exit
+[?2004lexit
+]0;kveikki@Kveikki-PC: /mnt/c/Repos/Fullstack Open 12/todo-app/todo-backend[01;32mkveikki@Kveikki-PC[00m:[01;34m/mnt/c/Repos/Fullstack Open 12/todo-app/todo-backend[00m$ ei[Kxit
+exit
+
+Script done on 2022-05-30 15:58:56+03:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  todo:
+    image: todo-backend
+    build: .
+    ports:
+      - 3000:3000

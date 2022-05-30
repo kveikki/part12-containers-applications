@@ -1,0 +1,10 @@
+Script started on 2022-05-29 14:58:25+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+]0;kveikki@Kveikki-PC: /mnt/c/Repos/Fullstack Open 12[01;32mkveikki@Kveikki-PC[00m:[01;34m/mnt/c/Repos/Fullstack Open 12[00m$ exitdocker run -it ubuntu bashexit[Kdocker run -it ubuntu bashexit[Kdocker run -it ubuntu bash
+[?2004h]0;root@b940887ba8d6: /root@b940887ba8d6:/# [K]0;root@b940887ba8d6: /root@b940887ba8d6:/# mkdir usr/src/app
+[?2004l[?2004h]0;root@b940887ba8d6: /root@b940887ba8d6:/# touch usr/r src/app/inde.js   x.js
+[?2004l[?2004h]0;root@b940887ba8d6: /root@b940887ba8d6:/# [Kexit
+[?2004lexit
+]0;kveikki@Kveikki-PC: /mnt/c/Repos/Fullstack Open 12[01;32mkveikki@Kveikki-PC[00m:[01;34m/mnt/c/Repos/Fullstack Open 12[00m$ exit
+exit
+
+Script done on 2022-05-29 14:58:50+03:00 [COMMAND_EXIT_CODE="0"]

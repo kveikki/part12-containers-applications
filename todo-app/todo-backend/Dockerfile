@@ -2,14 +2,10 @@ FROM node:16
 
 WORKDIR /usr/src/todo
 
-COPY --chown=node:node . .
+COPY . .
 
-RUN npm ci --only=production
+RUN npm install
 
-ENV DEBUG=todo-backend:*
+RUN npm install nodemon -g
 
-ENV NODE_ENV production
-
-USER node
-
-CMD ["node", "./bin/www"]
+CMD ["nodemon", "./bin/www"]

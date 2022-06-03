@@ -1,11 +1,15 @@
 FROM node:16
 
+COPY --chown=node . ./usr/src/server
+
 WORKDIR /usr/src/server
 
-COPY . .
+ENV CI=true
 
-RUN npm install
+ENV NODE_ENV production
 
-RUN npm install nodemon -g
+RUN npm ci --only=production
 
-CMD ["nodemon", "./bin/www"]
+USER node
+
+CMD ["node", "./bin/www"]

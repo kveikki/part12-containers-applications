@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  app:
+    image: patientor-frontend-dev
+    build:
+      context: ./patientor-frontend/
+      dockerfile: ./dev.Dockerfile
+    volumes:
+      - ./patientor-frontend/:/usr/src/app
+    ports:
+      - 3000:3000
+    container_name: patientor-frontend-dev
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: patientor-reverse-proxy
+    depends_on:
+      - app
+      - server
+  server:
+    image: patientor-backend-dev
+    build: 
+      context: ./patientor-backend/
+      dockerfile: ./dev.Dockerfile
+    ports:
+      - 3001:3001
+    container_name: patientor-server-dev
+    volumes:
+      - ./patientor-backend/:/usr/src/server/
+    environment:
+      - CHOKIDAR_USEPOLLING=true
